@@ -14,6 +14,3 @@ function removeScreenControls(){
     const rbutton=document.getElementById("rctrlbutton");
     rbutton.style.display="none";
 }
-function restart(){
-    location.reload();
-}

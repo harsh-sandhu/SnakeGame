@@ -12,6 +12,12 @@ window.addEventListener('keydown', e=>{
     if(e.key=='ArrowRight'&& direction.x==0){
         direction= {x:1,y:0};
     }
+    if(e.keyCode===32){
+        playPause();
+    }
+    if(e.keyCode===77){
+        muteFunction();
+    }
 })
 function getDirection(){
     return direction;

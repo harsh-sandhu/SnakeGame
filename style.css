@@ -20,19 +20,70 @@ body {
 #game-board {
   width: 85vmin;
   height: 85vmin;
-  background-color: lightblue;
+  background: linear-gradient(-45deg, #6726fd, #3078fd, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
   display: grid;
   grid-template-columns: repeat(25, 1fr);
   grid-template-rows: repeat(25, 1fr);
 }
-#scoreboard{
-    width:85vmin;
-    display: flex;
-    color:white;
-    font-family: "Press Start 2P", cursive;
-    font-size: 1vmin;
-    justify-content: space-between;
-    text-align: center;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#scoreboard {
+  width: 85vmin;
+  display: flex;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1vmin;
+  justify-content: space-between;
+  text-align: center;
+}
+#scoreboard > * {
+  align-self: center;
+}
+#playPause {
+  width: 20vmin;
+  border-radius: 2vmin;
+  align-self: center;
+}
+#muteButton {
+  border-radius: 50%;
+  padding: 10px;
+}
+#playPause:active {
+  border-bottom: none;
+}
+#muteButton:active {
+  border-bottom: none;
+  background-color: orangered;
+}
+
+.blink {
+  animation: linear 1s infinite words;
+  font-weight: 900;
+  color: orangered;
+}
+@keyframes words {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+    background-color: white;
+    text-shadow: 0 0 2px black;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 .snake {
   background-color: limegreen;
@@ -91,26 +142,32 @@ body {
   text-shadow: 0 0 10px white, 0 0 10px white, 0 0 20px white;
   transform: scale(0.9, 0.9);
 }
-.newHightScore{
-    color:white;
-    animation: ease-in-out 1s infinite newhighscore;
+.newHightScore {
+  color: white;
+  animation: ease-in-out 1s infinite newhighscore;
 }
 @keyframes newhighscore {
-    0% {
-      transform: scale(1, 1);
-    }
-    50% {
-      transform: scale(1.2, 1.2);
-    }
-    100%{
-      transform: scale(1, 1);
-    }
+  0% {
+    transform: scale(1, 1);
   }
-a{
-    color:lightgrey;
-    font-weight: lighter;
-    font-size: 80%;
-    text-decoration: none;
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+a {
+  color: lightgrey;
+  font-weight: lighter;
+  font-size: 80%;
+  text-decoration: none;
+}
+.buttonbox {
+  display: flex;
+}
+.buttonbox > * {
+  align-self: center;
 }
 @import url(https://fonts.googleapis.com/css?family=Lato:300);
 #controls {
@@ -203,9 +260,12 @@ Button:active {
   .rctrlbutton {
     display: block;
   }
-  #scoreboard{
-      font-size: 1.5vw;
-      margin-top:10px;
+  #scoreboard {
+    font-size: 1.5vw;
+    margin-top: 10px;
+  }
+  #scoreboard > * {
+    margin-top: 20px;
   }
 }
 @media (max-width: 1024px) and(max-height:1366px) {

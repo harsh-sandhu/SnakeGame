@@ -16,6 +16,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Snake</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -23,16 +30,22 @@
     <div class="container">
       <div id="scoreboard">
         <h1>Score:<span id="score">0</span></h1>
+        <button id="playPause" onclick="playPause()"></button>
         <h1>HighScore:<span id="highscore">0</span></h1>
       </div>
       <div id="game-board"></div>
-      <div id="ctrlbutton" class="ctrlbutton">
-        <button onclick="getScreenControls()">screen controls</button>
+      <div class="buttonbox">
+        <div id="ctrlbutton" class="ctrlbutton">
+          <button onclick="getScreenControls()">screen controls</button>
+        </div>
+        <div id="rctrlbutton" class="rctrlbutton">
+          <button onclick="removeScreenControls()">remove screen controls</button>
+        </div>
+        <button id="muteButton" onclick="muteFunction()"></button>
       </div>
-      <div id="rctrlbutton" class="rctrlbutton">
-        <button onclick="removeScreenControls()">remove screen controls</button>
-      </div>
-      <a href="https://github.com/harsh-sandhu" target="blank">harsh-sandhu@GitHub</a>
+      <a href="https://github.com/harsh-sandhu" target="blank"
+        >harsh-sandhu@GitHub</a
+      >
       <div id="controls" hidden>
         <div class="keys">
           <div id="up" class="up arr"><i class="fa fa-arrow-up"></i></div>
