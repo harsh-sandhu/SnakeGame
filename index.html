@@ -21,6 +21,10 @@
   </head>
   <body>
     <div class="container">
+      <div id="scoreboard">
+        <h1>Score:<span id="score">0</span></h1>
+        <h1>HighScore:<span id="highscore">0</span></h1>
+      </div>
       <div id="game-board"></div>
       <div id="ctrlbutton" class="ctrlbutton">
         <button onclick="getScreenControls()">screen controls</button>
@@ -28,6 +32,7 @@
       <div id="rctrlbutton" class="rctrlbutton">
         <button onclick="removeScreenControls()">remove screen controls</button>
       </div>
+      <a href="https://github.com/harsh-sandhu" target="blank">harsh-sandhu@GitHub</a>
       <div id="controls" hidden>
         <div class="keys">
           <div id="up" class="up arr"><i class="fa fa-arrow-up"></i></div>
@@ -48,4 +53,8 @@
     </div>
   </body>
   <script src="./index.js"></script>
+  <script src="./snake.js"></script>
+  <script src="./food.js"></script>
+  <script src="./controls.js"></script>
+  <script src="./controlPad.js"></script>
 </html>
