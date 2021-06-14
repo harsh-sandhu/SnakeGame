@@ -24,7 +24,7 @@ function main(currentTime){
         })
         
         let score=document.getElementById('score').innerHTML;
-        if(localStorage.getItem("harsh-sandhu-snake-game")<score){
+        if(parseInt(localStorage.getItem("harsh-sandhu-snake-game"))<parseInt(score)){
             localStorage.setItem("harsh-sandhu-snake-game", score);
             const newHighScore=document.createElement('h3');
             newHighScore.classList.add("newHightScore");

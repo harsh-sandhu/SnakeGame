@@ -1,5 +1,5 @@
 let food=randomFood();
-let score=0;
+let score="0";
 const EXPANTION_RATE=1;
 function drawFood(grid){
     const foodBlock=document.createElement('div');
@@ -10,7 +10,7 @@ function drawFood(grid){
 }
 function updateFood(){
     if(onSnake(food)){
-        score+=1;
+        score=(parseInt(score)+1).toString();
         expandSnake(EXPANTION_RATE);
         food=randomFood();
         document.getElementById('score').innerHTML=score;
